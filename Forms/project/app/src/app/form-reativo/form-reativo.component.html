@@ -1,0 +1,21 @@
+<form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label>Nome</label>
+        <input type="text" formControlName="nome" maxlength="150" required>
+    </div>
+
+    <div>
+        <label>Telefone</label>
+        <input type="text" formControlName="telefone" required>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" formControlName="email" required>
+    </div>
+
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+</form>

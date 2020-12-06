@@ -1,0 +1,25 @@
+<div class="w3-container">
+    <h2>Perfil de {{ usuario }}</h2>
+    <p>Profissão {{ profissao }}</p>
+    <p>Descrição {{ descricao }}</p>
+
+    <div *ngIf="exibe" class="w3-card-4 w3-dark-grey" style="width:40%">
+
+        <div class="w3-container w3-center">
+            <h3>Friend Request</h3>
+            <img [src]= "imagem" alt="Avatar" style="width:50%">
+            <h5>Gabriel</h5>
+        </div>
+        <div *ngFor="let certification of lista" id="cursos">
+            <div class="alert alert-primary" role="alert">
+                {{certification.cert}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="w3-section">
+        <button (click)="exibePerfil()" class="w3-button w3-green">Exibir Perfil</button>
+        <button (click)="ocultaPerfil()" class="w3-button w3-red">Ocultar Perfil</button>
+    </div>
+</div>
